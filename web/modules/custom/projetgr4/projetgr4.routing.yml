@@ -1,14 +1,7 @@
-# projetgr4.connection_list:
-#   path: 'user/{user}/myaccount'
-#   defaults:
-#     _title: 'connection'
-#     _controller: '\Drupal\projetgr4\Controller\HelloController::content'
-#   requirements:
-#     _access: 'TRUE'
-projetgr4.projetgr4:
-  path: '/projet'
+projetgr4.programmes:
+  path: 'user/{user}/programmes'
   defaults:
-    _title: 'hello'
-    _controller: '\Drupal\projetgr4\Controller\HelloController::content'
+    _title: 'programmes'
+    _controller: '\Drupal\projetgr4\Controller\ProgrammesController::content'
   requirements:
-    _access: 'TRUE'  
+    _access: 'TRUE'

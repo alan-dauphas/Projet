@@ -1,10 +1,5 @@
-# projetgr4.connection_list:
-#   title : Connection
-#   route_name: projetgr4.connection_list
-#   base_route: entity.user.canonical
-#   weight: 2
-projetgr4.projetgr4:
-  title : projetgr4!
-  route_name: projetgr4.projetgr4
-  base_route: projetgr4.projetgr4
-  weight: 1
+projetgr4.programmes:
+  title: Programmes
+  route_name: projetgr4.programmes
+  base_route: entity.user.canonical
+  weight: 2
