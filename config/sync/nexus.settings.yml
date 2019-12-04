@@ -4,26 +4,28 @@ features:
   comment_user_verification: true
   favicon: true
 logo:
-  use_default: true
+  use_default: false
   path: ''
 favicon:
-  use_default: true
-  path: ''
+  use_default: false
+  path: 'public://logo conférence_1_0.jpg'
+  mimetype: image/jpeg
 slideshow_display: 1
 show_breadcrumbs: 1
-slide1_head: 'Sample product'
-slide2_head: 'Sample service'
+slide1_head: 'Dernière Conférences'
+slide2_head: Hotels
 slide3_head: 'Contact us'
-slide1_desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt elit, sed do eiusmod tempor...'
-slide2_desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do Lorem ipsum dolor sit amet irure dolor in reprehenderit...'
+slide1_desc: 'Nos dernières références'
+slide2_desc: 'Nos hôtels'
 slide3_desc: 'Duis aute irure dolor in reprehenderit inLorem ipsum dolor sit amet, consectetur do Lorem ipsum dolor sit amet irure...'
-slide1_url: node/1
-slide2_url: node/2
+slide1_url: conferences
+slide2_url: hotels
 slide3_url: node/3
 _core:
   default_config_hash: zspC3IWx3gB7P08cyRQxXDFS-z8yLO9-4ziiOPrjkNI
 langcode: fr
 slide1_image:
-  - '8'
-slide2_image: {  }
+  - '11'
+slide2_image:
+  - '12'
 slide3_image: {  }

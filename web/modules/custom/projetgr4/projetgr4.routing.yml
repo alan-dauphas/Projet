@@ -5,3 +5,4 @@ projetgr4.programmes:
     _controller: '\Drupal\projetgr4\Controller\ProgrammesController::content'
   requirements:
     _access: 'TRUE'
+    
