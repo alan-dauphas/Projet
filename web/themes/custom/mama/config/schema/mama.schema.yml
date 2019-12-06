@@ -1,5 +1,5 @@
 # Required to validate default theme settings.
 
-nexus.settings:
+mama.settings:
   type: theme_settings
-  label: 'Nexus settings'
+  label: 'mama settings'

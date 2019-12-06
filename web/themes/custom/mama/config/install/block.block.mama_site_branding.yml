@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - nexus
-id: nexus_site_branding
-theme: nexus
+    - mama
+id: mama_site_branding
+theme: mama
 region: header
 weight: 0
 provider: null

@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - nexus
-id: nexus_breadcrumbs
-theme: nexus
+    - mama
+id: mama_breadcrumbs
+theme: mama
 region: highlighted
 weight: 50
 provider: null

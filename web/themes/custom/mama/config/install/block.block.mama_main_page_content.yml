@@ -4,16 +4,16 @@ dependencies:
   module:
     - system
   theme:
-    - nexus
-id: nexus_powered
-theme: nexus
-region: footer_second
+    - mama
+id: mama_content
+theme: mama
+region: content
 weight: 0
 provider: null
-plugin: system_powered_by_block
+plugin: system_main_block
 settings:
-  id: system_powered_by_block
-  label: 'Powered by Drupal'
+  id: system_main_block
+  label: 'Main page content'
   provider: system
   label_display: '0'
 visibility: {  }

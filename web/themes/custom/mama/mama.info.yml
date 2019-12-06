@@ -1,5 +1,6 @@
 name: Mama Theme
 type: theme
+base theme: nexus
 description: 'Mama is a theme for drupal 8. Developed by <a href="www.alan-dauphas.fr">alan-dauphas.fr</a>.'
 # core: 8.x
 

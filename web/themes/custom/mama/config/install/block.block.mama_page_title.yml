@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - nexus
-id: nexus_page_title
-theme: nexus
+    - mama
+id: mama_page_title
+theme: mama
 region: content_top
 weight: -50
 provider: null

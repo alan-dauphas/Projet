@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - nexus
-id: nexus_status_messages
-theme: nexus
+    - mama
+id: mama_status_messages
+theme: mama
 region: highlighted
 weight: 60
 provider: null

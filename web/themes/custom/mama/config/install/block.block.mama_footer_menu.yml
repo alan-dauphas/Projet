@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - nexus
-id: nexus_footer
-theme: nexus
+    - mama
+id: mama_footer
+theme: mama
 region: footer_first
 weight: 0
 provider: null

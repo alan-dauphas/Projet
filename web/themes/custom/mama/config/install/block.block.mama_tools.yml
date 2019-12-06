@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - nexus
-id: nexus_tools
-theme: nexus
+    - mama
+id: mama_tools
+theme: mama
 region: sidebar_first
 weight: 30
 provider: null
