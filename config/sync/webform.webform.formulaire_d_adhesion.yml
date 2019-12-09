@@ -12,7 +12,7 @@ id: formulaire_d_adhesion
 title: 'formulaire d''adhesion'
 description: ''
 category: ''
-elements: "interet_du_participant_au_programme:\n  '#type': textfield\n  '#title': 'interet du participant au programme'\n  '#required': true\n  '#required_error': 'Intérêt Obligatoir'\ndate_d_arrivee:\n  '#type': date\n  '#title': 'Date d''arrivée'\n  '#required': true\n  '#required_error': 'Date d''arrivée Obligatoire'\n  '#datepicker': true\ndate_de_dpart:\n  '#type': date\n  '#title': 'Date de Dpart'\n  '#required': true\n  '#required_error': 'Date de Départ Obligatoire'\n  '#datepicker': true\nchoix_d_un_hotels_:\n  '#type': webform_entity_select\n  '#title': 'Choix d''un Hôtels '\n  '#target_type': node\n  '#selection_handler': 'default:node'\n  '#selection_settings':\n    target_bundles:\n      hotels: hotels\ncoordonnees:\n  '#type': address\n  '#title': Coordonnées\n  '#field_overrides':\n    givenName: hidden\n    additionalName: hidden\n    familyName: hidden\n    organization: hidden\n    addressLine1: hidden\n    addressLine2: hidden\n    sortingCode: hidden\n    dependentLocality: hidden\n    administrativeArea: hidden\nun_fichier:\n  '#type': webform_document_file\n  '#title': 'un fichier'\n  '#file_preview': file"
+elements: "'#attributes':\n  class:\n    - 'messages messages--status'\ninteret_du_participant_au_programme:\n  '#type': textfield\n  '#title': 'interet du participant au programme'\n  '#required': true\n  '#required_error': 'Intérêt Obligatoir'\ndate_d_arrivee:\n  '#type': date\n  '#title': 'Date d''arrivée'\n  '#required': true\n  '#required_error': 'Date d''arrivée Obligatoire'\n  '#datepicker': true\ndate_de_dpart:\n  '#type': date\n  '#title': 'Date de Dpart'\n  '#required': true\n  '#required_error': 'Date de Départ Obligatoire'\n  '#datepicker': true\ncoordonnees:\n  '#type': address\n  '#title': Coordonnées\n  '#field_overrides':\n    givenName: hidden\n    additionalName: hidden\n    familyName: hidden\n    organization: hidden\n    addressLine1: hidden\n    addressLine2: hidden\n    sortingCode: hidden\n    dependentLocality: hidden\n    administrativeArea: hidden\nun_fichier:\n  '#type': webform_document_file\n  '#title': 'un fichier'\n  '#file_preview': file\n  '#file_extensions': pdf\nstatus:\n  '#type': select\n  '#title': Status\n  '#options':\n    attente: attente\n    refuséé: refuséé\n    acceptée: acceptée\n  '#required': true\n  '#default_value': attente\n  '#access_create_roles':\n    - administrator\n    - organisateur\n    - webmaster\n  '#access_update_roles':\n    - administrator\n    - organisateur\n    - webmaster\nhotels:\n  '#type': webform_entity_select\n  '#title': 'choix d''un Hotels'\n  '#target_type': node\n  '#selection_handler': views\n  '#selection_settings':\n    view:\n      view_name: webform_vue\n      display_name: entity_reference_1\n      arguments:\n        - '[webform:id]'\n        - '[webform_submission:source-entity:nid]'"
 css: ''
 javascript: ''
 settings:
@@ -25,7 +25,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_admin_theme: false
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -57,7 +57,9 @@ settings:
   submission_label: ''
   submission_log: false
   submission_views: {  }
-  submission_views_replace: {  }
+  submission_views_replace:
+    webform_routes: {  }
+    node_routes: {  }
   submission_user_columns: {  }
   submission_user_duplicate: false
   submission_access_denied: default
@@ -94,16 +96,18 @@ settings:
   preview_exclude_empty_checkbox: false
   draft: none
   draft_multiple: false
-  draft_auto_save: false
+  draft_auto_save: true
   draft_saved_message: ''
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: page
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_title: status
+  confirmation_message: 'Your request is saved and is under consideration'
   confirmation_url: ''
-  confirmation_attributes: {  }
+  confirmation_attributes:
+    class:
+      - 'messages messages--status'
   confirmation_back: true
   confirmation_back_label: ''
   confirmation_back_attributes: {  }
@@ -116,11 +120,11 @@ settings:
   limit_total_unique: false
   limit_user: null
   limit_user_interval: null
-  limit_user_message: ''
+  limit_user_message: '<h6>You are already submitted your request for this conference</h6>'
   limit_user_unique: false
   entity_limit_total: null
   entity_limit_total_interval: null
-  entity_limit_user: null
+  entity_limit_user: 1
   entity_limit_user_interval: null
   purge: none
   purge_days: null
@@ -130,20 +134,28 @@ settings:
 access:
   create:
     roles:
-      - anonymous
-      - authenticated
+      - administrator
+      - organisateur
+      - particiapants
+      - webmaster
     users: {  }
     permissions: {  }
   view_any:
-    roles: {  }
+    roles:
+      - administrator
+      - organisateur
     users: {  }
     permissions: {  }
   update_any:
-    roles: {  }
+    roles:
+      - administrator
+      - organisateur
     users: {  }
     permissions: {  }
   delete_any:
-    roles: {  }
+    roles:
+      - administrator
+      - organisateur
     users: {  }
     permissions: {  }
   purge_any:
@@ -151,15 +163,21 @@ access:
     users: {  }
     permissions: {  }
   view_own:
-    roles: {  }
+    roles:
+      - administrator
+      - organisateur
     users: {  }
     permissions: {  }
   update_own:
-    roles: {  }
+    roles:
+      - administrator
+      - organisateur
     users: {  }
     permissions: {  }
   delete_own:
-    roles: {  }
+    roles:
+      - administrator
+      - organisateur
     users: {  }
     permissions: {  }
   administer:
