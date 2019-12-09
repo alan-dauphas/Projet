@@ -8,7 +8,7 @@ logo:
   path: ''
 favicon:
   use_default: false
-  path: 'public://logo conférence_1_0.jpg'
+  path: 'public://logo_conférence.jpg'
   mimetype: image/jpeg
 slideshow_display: 1
 show_breadcrumbs: 1
@@ -27,5 +27,6 @@ langcode: fr
 slide1_image:
   - '11'
 slide2_image:
-  - '12'
-slide3_image: {  }
+  - '13'
+slide3_image:
+  - '15'
