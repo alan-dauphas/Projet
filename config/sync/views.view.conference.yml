@@ -172,16 +172,6 @@ display:
           table: node__field_hotels
           field: field_hotels
           plugin_id: field
-        delta:
-          id: delta
-          table: node__field_hotels
-          field: delta
-          plugin_id: numeric
-        field_inscription:
-          id: field_inscription
-          table: node__field_inscription
-          field: field_inscription
-          plugin_id: field
         field_organisateurs:
           id: field_organisateurs
           table: node__field_organisateurs
@@ -191,6 +181,11 @@ display:
           id: field_participants
           table: node__field_participants
           field: field_participants
+          plugin_id: field
+        field_inscription:
+          id: field_inscription
+          table: node__field_inscription
+          field: field_inscription
           plugin_id: field
       filters:
         status:
