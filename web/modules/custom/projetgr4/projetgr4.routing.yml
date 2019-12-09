@@ -5,4 +5,13 @@ projetgr4.programmes:
     _controller: '\Drupal\projetgr4\Controller\ProgrammesController::programme_status'
   requirements:
     _access: 'TRUE'
-    
+
+
+
+projetgr4.participants:
+  path: 'node/participants'
+  defaults:
+    _title: 'Participants'
+    _controller: '\Drupal\projetgr4\Controller\ProgrammesController::participants'
+  requirements:
+    _access: 'TRUE'

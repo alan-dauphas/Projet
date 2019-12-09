@@ -1,0 +1,5 @@
+# Required to validate default theme settings.
+
+mama.settings:
+  type: theme_settings
+  label: 'mama settings'
